@@ -1,11 +1,11 @@
-import "./App.css";
+import { Movie } from "./page/Movie";
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1>Hello...</h1>
+      <Movie />
     </>
   );
-}
+};
 
 export default App;

@@ -1,10 +1,11 @@
-import { Movie } from "./page/Movie";
+import { Post } from "./components/Post";
+import "./App.css";
 
 const App = () => {
   return (
-    <>
-      <Movie />
-    </>
+    <section className="main-section">
+      <Post />
+    </section>
   );
 };
 

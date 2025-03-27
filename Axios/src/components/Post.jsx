@@ -5,6 +5,10 @@ import { Form } from "./Form";
 export const Post = () => {
   //useState
   const [data, setData] = useState([]);
+  const [updateData, setUpdateData] = useState({
+    title: "",
+    body: "",
+  });
 
   // getPostData function
   const getPostData = async () => {
@@ -33,13 +37,18 @@ export const Post = () => {
   };
 
   const handleEditPost = (currData) => {
-    
+    setUpdateData(currData);
   };
 
   return (
     <>
       <section className="section-form">
-        <Form data={data} setData={setData} />
+        <Form
+          data={data}
+          setData={setData}
+          updateData={updateData}
+          setUpdateData={setUpdateData}
+        />
       </section>
       <section className="section-post">
         <ol>
